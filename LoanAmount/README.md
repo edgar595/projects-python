@@ -12,8 +12,6 @@ We conducted extensive exploratory data analysis (EDA) to understand the distrib
 - **Univariate Analysis:** Examined individual feature distributions.
 - **Bivariate Analysis:** Explored relationships between pairs of features.
 
-![Correlation Plot](images/correlation_plot.png)
-
 ## Modeling
 Several machine learning algorithms were tested to find the best fit for our data:
 - **Linear Regression**
@@ -31,3 +29,9 @@ The Random Forest model was tuned using techniques such as grid search and cross
 We developed a Streamlit application to provide a user-friendly interface for predicting loan amounts based on the selected features. The application allows users to input their data and get instant loan amount predictions.
 
 ![Streamlit App Screenshot](images/loan1.png)
+
+### Project Demonstration
+
+Here's a GIF illustrating how the Streamlit application works:
+
+![Project Demo GIF](images/giff.gif)
