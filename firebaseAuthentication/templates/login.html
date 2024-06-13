@@ -1,0 +1,68 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>User Login</title>
+</head>
+<body class="login-body">
+    <div class="box">
+      <span class="borderLine"></span>
+      <form id="loginForm" action="/login" method="post">
+         <h2>Login</h2>
+         <div class="inputBox">
+            <input type="email" id="email" name="email" required><br>
+             <span>Username</span>
+             <i></i>
+         </div>
+         <div class="inputBox">
+            <input type="password" id="password" name="password" required><br>
+             <span>Password</span>
+             <i></i>
+         </div>
+         <div class="links">
+             <a href="/">Sign up</a>
+         </div>
+         <input type="submit" value="login">
+       </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get form data
+            var formData = new FormData(this);
+            
+            // Send form data to the server using fetch API
+            fetch("/login", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url; // Redirect to dashboard upon successful login
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                // Display message based on response
+                var messageDiv = document.getElementById("message");
+                if (data.success) {
+                    messageDiv.innerText = "Hello, " + data.user_email + "! Login successful!";
+                } else {
+                    messageDiv.innerText = "Error: " + data.message;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                var messageDiv = document.getElementById("message");
+                messageDiv.innerText = "An error occurred. Please try again later.";
+            });
+        });
+    </script>
+</body>
+</html>
