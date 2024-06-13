@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .dropzone {
+            border: 2px dashed #0087F7;
+            border-radius: 5px;
+            background: white;
+            width: 200px;
+            height: 200px;
+        }
+        .dz-message {
+            font-weight: bold;
+            text-align: center;
+            margin: 2em 0;
+        }
+        .id-card {
+            width: 300px;
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .id-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .id-card .info {
+            margin: 10px 0;
+        }
+        .id-card .info span {
+            font-weight: bold;
+        }
+        .profile-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .profile-images img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ccc;
+            border-radius: 75px; /* Rounded corners for aesthetic */
+        }
+    </style>
+</head>
+<body>
+  <h2>Person of Interest Cast</h2>
+  <div class="profile-images">
+    <img src="{{ url_for('static', filename='profiles/fusco.png') }}" alt="Profile Image 1">
+    <img src="{{ url_for('static', filename='profiles/image2.jpg') }}" alt="Profile Image 2">
+    <img src="{{ url_for('static', filename='profiles/image3.jpg') }}" alt="Profile Image 3">
+    <img src="{{ url_for('static', filename='profiles/image4.jpg') }}" alt="Profile Image 4">
+    <img src="{{ url_for('static', filename='profiles/image5.jpg') }}" alt="Profile Image 5">
+    </div>
+  <h3>Upload an Image to predict the User</h3>
+  <div class="container">
+      <form action="/upload" class="dropzone" id="myDropzone"></form>
+      <div id="result" style="margin-top: 10px;">
+          <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none; width: 200px; height: 200px;">
+          <div id="idInfo"></div>
+      </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+  <script>
+      Dropzone.options.myDropzone = {
+          maxFilesize: 2, // MB
+          acceptedFiles: 'image/*',
+          maxFiles: 1,
+          init: function() {
+              this.on("maxfilesexceeded", function(file) {
+                  this.removeAllFiles();
+                  this.addFile(file);
+              });
+              this.on("success", function(file, response) {
+                  if (response.id_info) {
+                      document.getElementById('idInfo').innerHTML = response.id_info;
+                  } else if (response.error) {
+                      document.getElementById('idInfo').innerText = response.error;
+                  }
+              });
+              this.on("error", function(file, response) {
+                  document.getElementById('idInfo').innerText = response;
+              });
+          }
+      };
+  </script>
+</body>
+</html>

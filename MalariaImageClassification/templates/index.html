@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and View Image</title>
+    <style>
+        .image-box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            overflow: hidden;
+            float: left; /* Float the image box to the left */
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prediction-text {
+            clear: both; /* Clear floating elements */
+            margin-top: 10px; /* Add margin top for spacing */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+    <h1>View Uploaded Image</h1>
+    <div class="image-box">
+        {% if filename %}
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+    <div class="prediction-text">
+        {% if prediction is defined %}
+            {% if prediction >= 0.5 %}
+                <p>Prediction: Uninfected</p>
+            {% else %}
+                <p>Prediction: Parasitized</p>
+            {% endif %}
+        {% endif %}
+    </div>
+    <form action="/" method="get" class="reset-button">
+        <button type="submit">Reset</button>
+    </form>
+    
+</body>
+</html>
