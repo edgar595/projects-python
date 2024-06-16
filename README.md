@@ -40,5 +40,5 @@ Welcome to my Python projects repository! This repository contains various data 
 ## 6. Tweet Sentiment Analysis
 - **Objective**: Analyze tweet sentiments to classify them as positive, negative, or neutral.
 - **Description**: This project involves analyzing tweet data to classify sentiments using natural language processing (NLP) techniques. It includes data collection, preprocessing (tokenization, stop word removal, etc.), feature extraction using TF-IDF, and classification using BERT analysis and also Vader. The project results are displayed using a dash app.
-Technologies: Python, NLTK, Scikit-learn, BERT, dash
-Folder: tweet-sentiment-analysis
+- **Technologies**: Python, NLTK, Scikit-learn, BERT, dash
+- **Folder**: tweet-sentiment-analysis
