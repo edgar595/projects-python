@@ -38,8 +38,8 @@ The BERT model underwent rigorous hyperparameter tuning:
 - **User-Friendly Interface:** Intuitive design for easy navigation and interaction.
 
 ## Screenshots
-![Dash Application Overview](Airplanetweets/images/image.png)
+![Dash Application Overview](images/image.png)
   
 ## Project Demonstration GIF
 Here's a GIF illustrating how the Dash application works:
-![Project Demonstration GIF](Airplanetweets/images/twitter.gif)
+![Project Demonstration GIF](images/twitter.gif)
