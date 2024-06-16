@@ -42,4 +42,4 @@ The BERT model underwent rigorous hyperparameter tuning:
   
 ## Project Demonstration GIF
 Here's a GIF illustrating how the Dash application works:
-![Project Demonstration GIF](images/twitter.gif)
+![Project Demonstration GIF](images/vid.gif)
