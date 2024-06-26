@@ -42,3 +42,10 @@ Welcome to my Python projects repository! This repository contains various data 
 - **Description**: This project involves analyzing tweet data to classify sentiments using natural language processing (NLP) techniques. It includes data collection, preprocessing (tokenization, stop word removal, etc.), feature extraction using TF-IDF, and classification using BERT analysis and also Vader. The project results are displayed using a dash app.
 - **Technologies**: Python, NLTK, Scikit-learn, BERT, dash
 - **Folder**: tweet-sentiment-analysis
+
+## 7. Kenyan Law PDF Analysis
+
+- **Objective**: Extract and analyze text from the Constitution of Kenya PDF.
+- **Description**: This project involves extracting text from the Constitution of Kenya PDF, identifying chapters and their titles, retrieving chapter content, summarizing text, and searching for specific legal provisions. It uses PyPDF2 for text extraction, regular expressions for pattern matching, and transformers for summarization. The project provides a comprehensive analysis of the constitutional text.
+- **Technologies**: Python, PyPDF2, Regular Expressions, Natsort, Transformers
+- **Folder**: `kenyan-law-analysis`
