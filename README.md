@@ -49,3 +49,10 @@ Welcome to my Python projects repository! This repository contains various data 
 - **Description**: This project involves extracting text from the Constitution of Kenya PDF, identifying chapters and their titles, retrieving chapter content, summarizing text, and searching for specific legal provisions. It uses PyPDF2 for text extraction, regular expressions for pattern matching, and transformers for summarization. The project provides a comprehensive analysis of the constitutional text.
 - **Technologies**: Python, PyPDF2, Regular Expressions, Natsort, Transformers
 - **Folder**: `kenyan-law-analysis`
+
+
+## 8. Resume - Ranking
+- **Objective**: Rank resumes based on their similarity to a job description using machine learning techniques.
+- **Description**: This project involves analyzing and ranking resumes by their relevance to a given job description and department. It uses various text processing and machine learning techniques to extract text from resumes, preprocess the text, and compute similarity scores. The application allows users to upload a job description or input text directly. The top-ranked resumes are displayed, and users can view the details of each resume through a modal interface. The project employs a Dash app to provide an interactive and user-friendly experience.
+- **Technologies**: Python, TfidfVectorizer, Cosine Similarity, PyPDF2, Dash, Bootstrap
+- **Folder**: resume-ranking
