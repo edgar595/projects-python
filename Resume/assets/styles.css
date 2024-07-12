@@ -1,0 +1,56 @@
+/* custom_styles.css */
+
+/* Main background and text colors */
+body {
+    background-color: #002B36; /* Dark teal background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+    background-color: #073642; /* Slightly lighter teal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* White text */
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #073642; /* Slightly lighter teal */
+    border-bottom: 2px solid #2AA198; /* Accent color */
+}
+
+/* Link styling */
+a {
+    color: #2AA198; /* Accent color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+.button {
+    background-color: #2AA198; /* Accent color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #259C8E; /* Darker accent color */
+}
