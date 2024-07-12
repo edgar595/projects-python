@@ -1,59 +1,66 @@
-## Resume - Ranking
+# Resume Ranking Application
 
-**Introduction**
-This project aims to automate the ranking of resumes based on their relevance to a given job description using machine learning techniques. It utilizes text processing and cosine similarity to analyze resumes and compute similarity scores against the job description. The project is implemented as a Dash web application, providing an interactive interface for users to upload a job description or input text directly. The top-ranked resumes are displayed, allowing users to view details and summaries through a modal interface.
+## Introduction
+This project is designed to rank resumes based on a given job description. Users can either paste a job description or upload a PDF file, and the application will process and rank the resumes accordingly. This tool is particularly useful for HR departments and recruiters looking to streamline the resume screening process.
 
-**Installation**
+## Installation
 
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
-- Python 3.x installed on your system
-- Stable internet connection for dependencies
+- You have installed Python 3.x
+- You have a functioning internet connection
 
 ### Setup
 1. **Clone the Repository**
     ```sh
-    git clone https://github.com/yourusername/resume-ranking.git
-    cd resume-ml-ranking
+    git clone https://github.com/yourusername/resume-ranking-app.git
+    cd resume-ranking-app
     ```
 
 2. **Create a Virtual Environment**
-    It’s recommended to create a virtual environment for the project. Use the following commands:
+    It’s a good practice to create a virtual environment for your project. Run the following commands:
     ```sh
     python -m venv venv
-    source venv/bin/activate  
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 
 3. **Install Dependencies**
-    Install required Python packages using pip:
+    Install the required Python packages using pip:
     ```sh
     pip install -r requirements.txt
     ```
 
-**Usage**
-Here’s how to use the Resume ML Ranking tool:
+## Usage
+Here’s how to use the Resume Ranking Application:
 
-1. **Starting the Application**
-    To start the Dash application, run:
+1. **Start the Application**
+    To start the application, run:
     ```sh
     python app.py
     ```
-    This will start the application on your local server.
 
-2. **Uploading a Job Description**
-    - Paste or upload a job description into the input field provided.
-    - Click on the "Submit" button to initiate the ranking process.
+2. **Access the Application**
+    Open your web browser and go to `http://127.0.0.1:8050/`.
 
-3. **Viewing Ranked Resumes**
-    - The application will display the top-ranked resumes based on similarity scores.
-    - Click on resume links to view detailed summaries in a modal.
+3. **Upload Job Description**
+    You can either paste the job description in the provided text area or upload a PDF file with the job description. Click on the 'Submit' button to proceed.
 
-**Features**
-- Automatically ranks resumes based on similarity to a job description
-- Uses TF-IDF vectorization and cosine similarity for scoring
-- Provides an interactive interface with Dash for ease of use
-- Supports uploading job descriptions and viewing resume details
+    ![Step 1: Enter Job Description](image/image1.png)
 
----
+4. **View Ranked Resumes**
+    The application will display the ranked resumes based on the provided job description. The resumes are listed in descending order of their relevance score.
 
-This README provides an overview of the Resume - ML - Ranking project, guiding users on installation, usage, features, and licensing information. Adjust paths, commands, and details as per your project structure and requirements.
+    ![Step 2: View Ranked Resumes](image/image2.png)
+
+5. **View Resume Details**
+    Click on any resume to view the detailed content. A PDF viewer will pop up displaying the selected resume.
+
+    ![Step 3: View Resume Details](image/img3.png)
+
+## Features
+- **Job Description Input**: Enter job descriptions manually or upload as PDFs.
+- **Resume Ranking**: Ranks resumes based on relevance to the job description.
+- **PDF Viewer**: View the detailed resume directly in the application.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
