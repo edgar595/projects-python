@@ -12,7 +12,7 @@ This web application provides an interface to ask questions about protests in Ke
 
 ### Loading Screen
 
-![Loading Screen GIF](link-to-loading-screen-gif)
+![Loading Screen GIF](static/images/vid.gif)
 
 ### Question Answering
 
