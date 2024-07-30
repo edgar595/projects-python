@@ -12,14 +12,14 @@ This web application provides an interface to ask questions about protests in Ke
 
 ### Loading Screen
 
-![Loading Screen GIF](static/images/vid.gif)
+![Loading Screen GIF](static/images/vid1.gif)
 
 ### Question Answering
 
 1. **Question 1:**
-    - ![Question 1 Video](static/images/vid1.gif)
+    - ![Question 1 Video](static/images/vid2.gif)
 2. **Question 2:**
-    - ![Question 2 Video](static/images/vid2.gif)
+    - ![Question 2 Video](static/images/vid3.gif)
 
 ### Prerequisites
 
