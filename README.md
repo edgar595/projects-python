@@ -56,3 +56,21 @@ Welcome to my Python projects repository! This repository contains various data 
 - **Description**: This project involves analyzing and ranking resumes by their relevance to a given job description and department. It uses various text processing and machine learning techniques to extract text from resumes, preprocess the text, and compute similarity scores. The application allows users to upload a job description or input text directly. The top-ranked resumes are displayed, and users can view the details of each resume through a modal interface. The project employs a Dash app to provide an interactive and user-friendly experience.
 - **Technologies**: Python, TfidfVectorizer, Cosine Similarity, PyPDF2, Dash, Bootstrap
 - **Folder**: resume-ranking
+
+## 9. Protest Interface with AI-Powered Q&A
+
+- **Objective**: Create an interactive interface for protest-related information and AI-powered question answering.
+- **Description**: This project combines a visually engaging user interface with an AI-powered question answering system focused on protest-related information. It features:
+  - A stylized loading screen with dynamic progress updates and system messages.
+  - A main interface with a chat-like Q&A system powered by a RoBERTa-based model.
+  - A "Missing Persons" section displaying profiles of individuals.
+  - AI model that answers questions based on pre-defined QA pairs, date-based context, and keyword searches in a protest-related text corpus.
+  - Integration with Flask for backend processing and API endpoints.
+- **Technologies**: Python, Flask, HTML, CSS, JavaScript, PyPDF2, AI,Transformers (RoBERTa), NLTK, FuzzyWuzzy
+- **Key Features**:
+  - Dynamic loading screen with progress bar and system messages
+  - AI-powered question answering system
+  - Date-based and keyword-based context retrieval
+  - Missing persons profile display
+  - Responsive chat-like interface for user interactions
+- **Folder**: intelligence-protest-interface-qa

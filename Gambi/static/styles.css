@@ -1,0 +1,292 @@
+body {
+    background-color: #FAF9F6;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    text-align: left;
+}
+
+#initializing-screen {
+    display: block;
+}
+
+#initializing-screen span {
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+#initializing-screen span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#initializing-screen span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.progress-bar-container {
+    width: 300px;
+    height: 20px;
+    background-color: #FAF9F6;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    transition: width 0.5s;
+}
+
+#main-interface {
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-interface h1 {
+    margin-bottom: 10px;
+}
+
+#main-interface input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 2px solid #000;
+    background: #FAF9F6;
+    color: #000;
+}
+
+.arrow-icon {
+    font-size: 24px;
+    margin-top: 18px; 
+    animation: bounce 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#system-output {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #E2DFD2;
+    text-align: left;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#system-output p {
+    margin: 0;
+    padding: 0;
+    animation: scrollUp 0.5s linear forwards;
+}
+
+@keyframes scrollUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+#welcome-screen, #hello-world-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#hello-world-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    max-height: 100vh; 
+    overflow-y: scroll;
+}
+
+.hello-world-container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#hello-world-screen h1 {
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.horizontal-line {
+    width: calc(100% + 40px);
+    height: 2px;
+    background-color: #000;
+    margin-top: 10px;
+}
+
+#back-arrow-icon {
+    position: absolute;
+    top: 40px; /* Adjust this value to move the arrow lower */
+    right: 20px;
+    z-index: 10;
+}
+
+.user-profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Change back to flex-start */
+    align-content: flex-start;
+    margin-top: 10px;
+    max-height: 70vh;
+    overflow-y: scroll;
+    padding-right: 10px;
+    width: calc(100%);
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+.user-profiles-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.user-profiles-container::-webkit-scrollbar-track {
+    background: #808080;
+}
+
+.user-profiles-container::-webkit-scrollbar-thumb {
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    border: 3px solid #808080;
+}
+
+.user-profile {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #FAF9F6;
+    width: calc(25% - 10px); 
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+    margin: 10px 5px; 
+    margin-top: 60px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+}
+
+.user-profiles-container::after {
+    content: "";
+    flex: auto;
+}
+
+.user-profile:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    background-color: #E6E6E6; 
+    border-color: #333; 
+}
+
+.user-profile:hover .profile-image {
+    border-color: #333; /* Darker border for the image on hover */
+}
+
+.user-profile:hover .profile-info {
+    color: #333; /* Slightly darker text on hover */
+}
+
+.profile-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #000; 
+    background-color: #000; 
+}
+
+.user-profile .profile-info {
+    color: #000; /* Text color */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#chat-box {
+    width: 750px;
+    height: 300px;
+    border: 2px solid #000;
+    background: #F9F6EE;
+    color: #000;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#chat-input-container{
+    align-items: flex-end;
+}
+
+#send-button {
+    padding: 10px;
+    background: #000;
+    color: #FAF9F6;
+    border: none;
+    cursor: pointer;
+}
+
+#loading-indicator {
+    display: none;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.answer {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.answer ul, .answer ol {
+    padding-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.answer li {
+    margin-bottom: 4px;
+}

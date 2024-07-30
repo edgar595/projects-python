@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protest Interface</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Firebase libraries -->
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="initializing-screen" class="screen">
+        <p>We the People<span>.</span><span>.</span><span>.</span></p>
+    </div>
+    <div id="loading-screen" class="screen">
+        <div id="system-output"></div>
+        <p>LOADING</p>
+        <p id="loading-message">RESOURCES.COMM.ARCHIVE</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+    <div id="main-interface" class="screen">
+        <div id="welcome-screen">
+            <h1>Welcome</h1>
+            <div id="chat-container">
+                <div id="chat-box"></div>
+                <div id="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="protest related questions..." disabled>
+                    <button id="send-button" disabled>Send</button>
+                </div>
+                <div id="model-loading-indicator">AI model is loading... Please wait.</div>
+            </div>
+            <div class="arrow-icon" id="arrow-icon"><i class="fas fa-arrow-down"></i></div>
+        </div>
+        
+        <div id="hello-world-screen" style="display: none;">
+            <div class="hello-world-container">
+                <h1>Missing Persons</h1>
+                <div class="horizontal-line"></div>
+        
+                <!-- User Profiles Container -->
+                <div class="user-profiles-container">
+                    <!-- User Profile 1 -->
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="John Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: John Doe</p>
+                            <p>Location: Nairobi</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+                    <!-- User Profile 2 -->
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Jane Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: Jane Doe</p>
+                            <p>Location: Mombasa</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+                    <!-- User Profile 3 -->
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: Alice Doe</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user1</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                        </div>
+                    </div>
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="/static/images/images.jpg" alt="Alice Doe" class="profile-image">
+                        <div class="profile-info">
+                            <p>Name: user2</p>
+                            <p>Location: Kisumu</p>
+                            <p>Last Seen: 12-07-2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-icon" id="back-arrow-icon"><i class="fas fa-arrow-up"></i></div>
+        </div>
+
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
