@@ -17,9 +17,9 @@ This web application provides an interface to ask questions about protests in Ke
 ### Question Answering
 
 1. **Question 1:**
-    - ![Question 1 Video](link-to-question-1-video)
+    - ![Question 1 Video](static/images/vid1.gif)
 2. **Question 2:**
-    - ![Question 2 Video](link-to-question-2-video)
+    - ![Question 2 Video](static/images/vid2.gif)
 
 ### Prerequisites
 
