@@ -74,3 +74,10 @@ Welcome to my Python projects repository! This repository contains various data 
   - Missing persons profile display
   - Responsive chat-like interface for user interactions
 - **Folder**: intelligence-protest-interface-qa
+
+## 10. PDF Chatbot
+
+- **Objective**: Develop an interactive chatbot for querying PDF documents.
+- **Description**: This project creates a chatbot interface for querying information from uploaded PDF files. It uses LangChain for text splitting, embedding, vector storage, and conversational retrieval. The Streamlit application allows users to upload PDFs, process them, and interact with the chatbot to get answers from the PDF content.
+- **Technologies**: Python, Streamlit, PyPDF2, LangChain, Cohere, FAISS
+- **Folder**: `pdf-chatbot`
