@@ -81,3 +81,16 @@ Welcome to my Python projects repository! This repository contains various data 
 - **Description**: This project creates a chatbot interface for querying information from uploaded PDF files. It uses LangChain for text splitting, embedding, vector storage, and conversational retrieval. The Streamlit application allows users to upload PDFs, process them, and interact with the chatbot to get answers from the PDF content.
 - **Technologies**: Python, Streamlit, PyPDF2, LangChain, Cohere, FAISS
 - **Folder**: `pdf-chatbot`
+
+## 11. Breast Cancer Prediction
+
+- **Objective**: Predict breast cancer diagnosis using cell nuclei information.
+- **Description**: This project uses machine learning to predict whether a breast mass is benign or malignant based on cell nuclei measurements. It features an interactive Streamlit interface with adjustable sliders for various cell measurements, a radar chart visualization of the input data, and a prediction output with probability scores. The app can be connected to a cancer lab to assist in diagnosing breast cancer from tissue samples.
+- **Key Features**:
+  - Interactive sidebar with sliders for adjusting cell nuclei measurements
+  - Radar chart visualization of mean, standard error, and worst values for various cell characteristics
+  - Machine learning model integration for cancer prediction
+  - Probability scores for benign and malignant outcomes
+  - Responsive design with custom CSS styling
+- **Technologies**: Python, Streamlit, Pandas, Plotly, Scikit-learn, Pickle
+- **Folder**: `Cancer`
