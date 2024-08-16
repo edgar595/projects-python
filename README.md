@@ -94,3 +94,9 @@ Welcome to my Python projects repository! This repository contains various data 
   - Responsive design with custom CSS styling
 - **Technologies**: Python, Streamlit, Pandas, Plotly, Scikit-learn, Pickle
 - **Folder**: `Cancer`
+
+## 12. Chat with MySQL
+- **Objective**: Interact with a MySQL database using a chat interface.
+- **Description**: This project creates a chat interface for interacting with a MySQL database. Users can ask SQL-related questions, and the application generates SQL queries based on the database schema and conversation history. The Streamlit app provides a user-friendly chat interface for querying the database and receiving natural language responses.
+- **Technologies**: Python, Streamlit, LangChain, Cohere, MySQL
+- **Folder**: chat-with-mysql
