@@ -100,3 +100,12 @@ Welcome to my Python projects repository! This repository contains various data 
 - **Description**: This project creates a chat interface for interacting with a MySQL database. Users can ask SQL-related questions, and the application generates SQL queries based on the database schema and conversation history. The Streamlit app provides a user-friendly chat interface for querying the database and receiving natural language responses.
 - **Technologies**: Python, Streamlit, LangChain, Cohere, MySQL
 - **Folder**: chat-with-mysql
+
+## 13. Insurance Data Analysis and Prediction
+- **Objective**: Analyze insurance data and predict policyholder behavior using machine learning techniques.
+
+- **Description**: This project focuses on analyzing a comprehensive insurance dataset, including details for Policyholder Information, Policy Information, Claim Information, and more. It involves data cleaning, exploratory data analysis (EDA), and predictive modeling. The project aims to identify patterns in policyholder behavior and predict future claims. The results are visualized and presented using dash.
+
+- **Technologies**: Python, Pandas, Scikit-learn, AI, plotly, Database
+
+- **Folder**: insurance-data-analysis
